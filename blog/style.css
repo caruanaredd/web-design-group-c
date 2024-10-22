@@ -1,0 +1,59 @@
+/*********************** CSS RESET ***********************/
+* {
+    box-sizing: border-box; /* So HTML will behave */
+
+    margin: 0;
+    padding: 0;
+}
+
+/*********************** GENERIC ELEMENTS ***********************/
+body {
+    background-color: #fafafa;
+
+    font-family: Montserrat, Arial, sans-serif;
+
+    line-height: 1.6;
+
+    min-height: 200vh;
+}
+
+/*********************** INTRO SCREEN ***********************/
+.intro {
+    background-image: url(images/leaves.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+    width: 100vw; /* vw - Viewport Width */
+    height: 100vh; /* vh - Viewport Height */
+
+    display: flex;
+}
+
+.intro-container {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    /* properties: X Y Radius Color */
+
+    width: 25%;
+
+    align-self: center;
+    text-align: center;
+
+    padding: 20px;
+    margin: auto;
+}
+
+.intro h1 {
+    font-weight: normal;
+    text-transform: uppercase;
+
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+.intro p {
+    line-height: 2;
+}
