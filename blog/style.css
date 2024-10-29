@@ -25,6 +25,8 @@ body {
     background-attachment: fixed;
 
     width: 100vw; /* vw - Viewport Width */
+    width: auto; /* 100vw is causing a small issue */
+
     height: 100vh; /* vh - Viewport Height */
 
     display: flex;
@@ -99,4 +101,43 @@ body {
 
     transition-duration: 10s;
     transition-timing-function: linear;
+}
+
+/*********************** CONTAINER ***********************/
+.container {
+    max-width: 1280px;
+
+    margin: auto;
+}
+
+/*********************** GRID LAYOUT ***********************/
+.row {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 50px;
+}
+
+.two-columns .card {
+    width: calc((100% - 50px) / 2);
+}
+
+.three-columns .card {
+    width: calc((100% - 100px) / 3);
+}
+
+/*********************** MAIN CONTENT ***********************/
+.main-content {
+    margin-top: 100px;
+}
+
+.vertical-title {
+    font-size: 0.9em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+
+    transform-origin: 0 0; /* rotate from the top left */
+    transform: rotate(90deg) translateY(5px);
+
+    position: absolute;
 }
