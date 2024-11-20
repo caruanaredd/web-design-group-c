@@ -17,6 +17,18 @@ body {
     min-height: 200vh;
 }
 
+hr {
+    border: none;
+
+    /* Values: Size Width Color */
+    border-top: 1px solid #ccc;
+
+    /* !important makes it difficult to change
+        specific css commands later */
+    margin-top: 50px !important;
+    margin-bottom: 50px !important;
+}
+
 /*********************** INTRO SCREEN ***********************/
 .intro {
     background-image: url(images/leaves.jpg);
@@ -33,6 +45,11 @@ body {
     
     position: relative;
     z-index: 1010;
+}
+
+.intro-narrow {
+    height: 75vh;
+    z-index: 900;
 }
 
 .intro-container {
@@ -121,6 +138,10 @@ body {
     gap: 50px;
 }
 
+.one-column .card {
+    width: 100%;
+}
+
 .two-columns .card {
     width: calc((100% - 50px) / 2);
 }
@@ -132,6 +153,15 @@ body {
 /*********************** MAIN CONTENT ***********************/
 .main-content {
     margin-top: 100px;
+}
+
+.content-narrow {
+    width: 50%;
+    min-width: 640px;
+
+    /* REMINDER: Centers
+    things horizontally */
+    margin: auto;
 }
 
 .vertical-title {
@@ -238,4 +268,28 @@ body {
 .navbar-nav .nav-link {
     /* this means top/bottom left/right */
     padding: 30px 20px;
+}
+
+/*********************** STORY ***********************/
+.story-header h1 {
+    font-size: 2em;
+    margin-bottom: 25px;
+}
+
+.story-header p {
+    font-size: 1.5em;
+    font-family: Cardo, Georgia, 'Times New Roman', Times, serif;
+    font-style: italic;
+    line-height: 1.2;
+}
+
+.story-header .byline {
+    margin-top: 10px;
+}
+
+/* Targets EVERYTHING inside
+    class="byline" */
+.story-header .byline * {
+    display: inline;
+    font-style: normal;
 }
